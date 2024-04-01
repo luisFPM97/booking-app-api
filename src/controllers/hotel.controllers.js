@@ -6,8 +6,9 @@ const City = require('../models/City');
 const Image = require('../models/Image');
 
 const getAll = catchError(async(req, res) => {
-    const {name, cityId} = req.query
+    const {name, cityId, price} = req.query
     const where = {}
+    if (price) where.price = price
     if(cityId) where.cityId = cityId
     if(name) where.name = { [Op.iLike]: `%${name}%` }
     const results = await Hotel.findAll({

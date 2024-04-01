@@ -11,11 +11,11 @@ const Hotel = sequelize.define('hotel', {
         type: DataTypes.TEXT,
         allowNull: false
     },
-    Price: {
+    price: {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    Address: {
+    address: {
         type: DataTypes.STRING,
         allowNull: false
     },
