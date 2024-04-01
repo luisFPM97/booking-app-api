@@ -6,11 +6,11 @@ const reviewRouter = express.Router();
 
 reviewRouter.route('/reviews')
     .get(verifyJWT, getAll)
-    .post(verifyJWT, create);
+    .post(verifyJWT, create)
 
 reviewRouter.route('/reviews/:id')
     .get(getOne)
     .delete(verifyJWT, remove)
-    .put(verifyJWT, update);
+    .put(verifyJWT, update)
 
 module.exports = reviewRouter;
