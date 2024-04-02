@@ -2,6 +2,7 @@ const app = require('../app');
 const User = require('../models/User');
 const sequelize = require('../utils/connection');
 const request = require('supertest');
+
 const main = async() => {
     try{
         // Acciones a ejecutar antes de los tests
